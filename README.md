@@ -1,36 +1,55 @@
-# Image-Compression-using-K-Means-Clustering
+# Image Compression Using K-means Clustering
 
-## Description
+## Overview
 
-This is a MATLAB code that compresses the colors of an image using K-means clustering. The compression is achieved by reducing the number of colors used in the image while preserving its visual quality. The output is a compressed image that uses a specified number of colors.
+This repository hosts a MATLAB project that demonstrates the application of K-means clustering for image compression. The project utilizes K-means to reduce the number of colors in an image, thereby compressing the image with minimal perceptible loss in quality.
 
-### Motivation
-My motivation for building this project was to gain a better understanding of image processing techniques and algorithms for color compression. I was also interested in exploring K means clustering and visualizing data using scatter plots and subplots.
+## Project Description
 
-### Reason for building the project
-I wanted to implement an algorithm for color compression using K-means clustering and demonstrate a proof of concept for a larger project that required image compression. I also wanted to share this code with others who may find it useful for their own projects.
+The aim of this project was to explore the effectiveness of K-means clustering in reducing the data size of images by segmenting the color space into a specified number of clusters. The project serves as an investigation into practical applications of machine learning algorithms in digital image processing.
 
-### Problem it solves
-This project solves the problem of reducing the number of colors used in an image while maintaining its visual quality. This is useful for compressing large images that may take a long time to load or display, or for reducing storage space required for storing images.
+### Problem Solved
 
-### What was learned
-By building this project, I learned about how to implement the K-means clustering algorithm, and visualize data using scatter plots and subplots in MATLAB. I also gained a better understanding of the trade-offs between image quality and compression, and the importance of balancing these factors for different use cases.
+The project addresses the challenge of high storage and bandwidth requirements for high-quality images. By reducing the number of unique colors in an image, the project demonstrates how to achieve significant reductions in image file size while maintaining visual fidelity.
 
+### Learnings
 
-## Usage
+Throughout the development, insights were gained into:
+- The mechanics of K-means clustering and its application in quantizing color spaces.
+- Image manipulation and processing using MATLAB's image processing capabilities.
+- Visualization techniques for color data in three-dimensional space.
 
-1.Ensure that you have MATLAB installed on your system.
+## Setup
 
-2.Clone the repository and navigate to the directory containing the code.
+### Prerequisites
 
-3.Open MATLAB and run the script color_compression.m.
-
-## Code Explanation
-
-The script starts by reading in an image of a sparrow and converting it to a matrix X of size (339*509)x3. The matrix X is then plotted using a 3D scatter plot where the x, y and z axes represent the red, green and blue color channels respectively.
-
-The script then performs K-means clustering on the matrix X with a specified number of clusters (k) and a number of replicates. The output of the clustering is a set of cluster centers (C) and an index vector (idx) indicating the cluster membership of each pixel in the image. The pixels are then mapped to their respective cluster centers to create a compressed version of the image.
-
-Finally, the script plots the original and compressed image using a subplot. The first subplot shows the original 3D scatter plot, while the second subplot shows the compressed 3D scatter plot. The third and fourth subplots show the original and compressed images respectively.
+- MATLAB
 
 
+
+## Data
+
+The input data for this project is a high-resolution image, 'sparrow.jpg', which is then processed to extract color data and compress the number of colors.
+
+## Methodology
+
+The script performs the following steps:
+1. **Image Reading:** Loads an image into an array.
+2. **Color Extraction and Reshaping:** Converts the image into a two-dimensional array where each row represents a color (RGB).
+3. **3D Scatter Plot:** Visualizes the original color distribution in three-dimensional space.
+4. **K-means Clustering:** Applies K-means clustering to reduce the number of unique colors.
+5. **Color Mapping and Compression:** Maps original colors to the nearest cluster centroid to compress the image.
+6. **Visualization:** Compares the original and compressed images and their color distributions.
+
+## Results
+
+The results include:
+- A 3D scatter plot showing the original and compressed color spaces.
+- Display of the original and compressed images side by side.
+- Calculation and display of the compression size as a percentage of the original.
+
+## Repository Structure
+
+- `README.md`: This file.
+- `sparrow.jpg`: Sample image used for compression.
+- `image_compression_script.m`: MATLAB script performing the compression.
