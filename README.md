@@ -33,6 +33,4 @@ The script then performs K-means clustering on the matrix X with a specified num
 
 Finally, the script plots the original and compressed image using a subplot. The first subplot shows the original 3D scatter plot, while the second subplot shows the compressed 3D scatter plot. The third and fourth subplots show the original and compressed images respectively.
 
-## Credits
 
-This code was written by [Insert your name here] and is licensed under the MIT License. Feel free to modify and distribute this code as you see fit. If you find this code useful, please consider citing it in your work.
